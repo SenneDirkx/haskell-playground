@@ -15,7 +15,7 @@ map' :: (Int -> Int) -> [Int] -> [Int]
 map' f xs = foldr' (\y ys -> (f y):ys) [] xs
 
 filter' :: (Int -> Bool) -> [Int] -> [Int]
-filter' f xs = foldr' (\y ys -> if f y then y:ys else ys) [] xs
+filter' f = foldr' (\y ys -> if f y then y:ys else ys) []
 
 -- * Given helpers
 
